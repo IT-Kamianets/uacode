@@ -1,0 +1,116 @@
+body {
+	background: black;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container {
+	width: 1200px;
+	height: 900px;
+	position: relative;
+	margin: 80px 0;
+}
+.navbar-nav{
+
+	gap: 80px;
+}
+/* Чорний фон для навігації */
+.navbar {
+	background-color: black;
+  }
+  
+  /* Стиль для тексту і посилань */
+  .navbar-brand, .nav-link {
+	color: white !important;
+	display: flex;
+	align-items: center;
+	height: 100%; /* Займаємо всю висоту контейнера */
+  }
+  
+  /* Для активних або при наведенні посилань */
+  .nav-link.active, .nav-link:hover {
+	color: #ccc !important;
+  }
+  
+  /* Для кнопки меню (тоглер) */
+  .navbar-toggler {
+	border-color: white;
+  }
+  
+  .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+.u {
+	color: rgb(82, 113, 250);
+}
+
+.a {
+	color: yellow;
+}
+
+///planet
+
+.text-overlay {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	z-index: 10;
+
+	p {
+		font-size: 3vh;
+		text-transform: uppercase;
+		font-family: monospace;
+		text-shadow: -2px 9px 15px rgba(0, 0, 0, 0.9);
+	}
+}
+
+.planet {
+	position: absolute;
+	border-radius: 50%;
+}
+
+.jupiter {
+	left: calc(100% - 1000px);
+	width: 800px;
+	height: 800px;
+	padding-left: 5px;
+	background-clip: padding-box;
+	background-image: url(http://maujor.com/labs/jupiter.jpg);
+	animation: rotate infinite linear reverse 30s;
+}
+
+
+.planet:before {
+	position: absolute;
+	left: -5px;
+	content: ' ';
+	display: block;
+	border-radius: 50%;
+}
+
+.jupiter:before {
+	width: 805px;
+	height: 805px;
+	box-shadow: inset 60px 0 60px black;
+	background: linear-gradient(-90deg, transparent 30%, black);
+}
+
+
+@keyframes rotate {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 100% 0;
+	}
+}
