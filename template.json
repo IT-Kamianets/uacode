@@ -1,10 +1,10 @@
 {
-	"title": "Title which will fit on all pages",
-	"description": "Description which will fit on all pages",
+	"title": "CodeUA",
+	"description": "CodeUA — інноваційна мова програмування для дітей з використанням українських літер. Робить вивчення кодування захопливим та зрозумілим, допомагаючи юним програмістам писати код рідною мовою",
 	"keywords": "waw, web art work, server render, template",
 	"prefix": "/codeua",
 	"favicon": "img/favicon.ico",
-	"image": "https://webartwork.github.io/wjst-default/img/avatar.png",
+	"image": "/codeua/img/codelogo.png",
 	"author": "Honchar Denys",
 	"scss": "scss/index.scss",
 	"items": [

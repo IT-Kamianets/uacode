@@ -45,19 +45,13 @@ body {
 	background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
 
-.u {
-	color: rgb(82, 113, 250);
-}
 
-.a {
-	color: yellow;
-}
 
 ///planet
 
 .text-overlay {
 	position: absolute;
-	top: 35%;
+	top: 28%;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
@@ -113,4 +107,8 @@ body {
 	100% {
 		background-position: 100% 0;
 	}
+}
+
+.logo{
+	margin-bottom: 20px;
 }
