@@ -1,1 +1,41 @@
-<p>Page Compiler is connected</p>
+<div class="container compiler-block">
+    <h3 style="color: aliceblue;">Компілятор:</h3>
+    <textarea id="code" rows="10" cols="50" placeholder="Введіть український код..."></textarea><br>
+    <button onclick="compile()">Запустити код</button>
+
+    <h3 style="color: aliceblue;">Консольний вивід:</h3>
+    <pre id="consoleOutput"></pre>
+</div>
+<div class="jupiter planet"></div>
+<script>
+    const consoleOutput = document.getElementById('consoleOutput');
+
+    function print(message) {
+        consoleOutput.textContent += message + '\n';
+    }
+
+    function compile() {
+        consoleOutput.textContent = '';
+
+        const ukrainianCode = document.getElementById('code').value;
+
+        const translations = {
+            'Друк': 'print',
+            'якщо': 'if',
+            'Функція': 'function',
+            'поки': 'while',
+        };
+
+        let translatedCode = ukrainianCode.trim();
+        for (const [uaCmd, jsCmd] of Object.entries(translations)) {
+            translatedCode = translatedCode.split(uaCmd).join(jsCmd);
+        }
+
+        try {
+            eval(translatedCode);
+        } catch (error) {
+            print("Помилка в коді: " + error.message);
+        }
+    }
+</script>
+</script>
