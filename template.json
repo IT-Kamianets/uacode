@@ -4,7 +4,7 @@
 	"keywords": "waw, web art work, server render, template",
 	"prefix": "/codeua",
 	"favicon": "img/favicon.ico",
-	"image": "/codeua/img/codelogo.png",
+	"image": "/codeua/img/CODEUA.png",
 	"author": "Honchar Denys",
 	"scss": "scss/index.scss",
 	"items": [

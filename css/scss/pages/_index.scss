@@ -51,14 +51,107 @@ body {
 
 
 @media (max-width: 991px) {
-    .navbar-nav {
-        display: contents;
-    }
-    .nav-item {
-        flex-grow: 1;
-        text-align: center;
-    }
+	.navbar-nav {
+		display: contents;
+	}
+
+	.nav-item {
+		flex-grow: 1;
+		text-align: center;
+	}
 }
+
+/* Основний стиль для десктопної версії */
+.navbar-brand.logo-left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-left: 40px;
+}
+
+.container-fluid {
+	position: relative;
+}
+
+.navbar-nav {
+	margin-left: auto;
+	margin-right: 40px;
+	gap: 80px;
+}
+
+/* Забезпечення навігаційної панелі повної ширини */
+.navbar {
+	position: relative;
+	width: 100%;
+}
+
+/* Стиль для кнопки меню (тоглер) */
+.navbar-toggler {
+	border-color: white;
+}
+
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+/* Мобільна версія */
+@media (max-width: 991px) {
+	.navbar-brand.logo-left {
+		position: relative;
+		padding-left: 10px;
+	}
+
+	.container-fluid {
+		padding: 0 15px;
+	}
+
+	.navbar-nav {
+		flex-direction: column;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.nav-item {
+		margin: 10px 0;
+	}
+
+	.navbar-nav {
+		gap: 20px;
+	}
+
+	.navbar-collapse {
+		text-align: center;
+	}
+}
+
+/* Для маленьких мобільних пристроїв (до 576px) */
+@media (max-width: 576px) {
+	.navbar-brand.logo-left {
+		padding-left: 5px;
+	}
+
+	.navbar-nav {
+		gap: 15px;
+	}
+
+	.nav-item {
+		margin: 5px 0;
+	}
+
+	.navbar-toggler {
+		margin-right: 10px;
+	}
+}
+
+
+.navbar {
+	position: relative;
+	width: 100%;
+}
+
+
 /* Стиль для планети */
 .planet {
 	position: fixed;
@@ -216,6 +309,7 @@ a {
 	}
 
 }
-.text-color{
+
+.text-color {
 	color: aliceblue;
 }
