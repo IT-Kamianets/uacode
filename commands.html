@@ -26,6 +26,7 @@
 		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="css/index.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
 </head>
 
 <body>
@@ -96,15 +97,75 @@
 		<div class="container commands-block">
     <h3 style="color: aliceblue;">Список команд:</h3>
     <ul class="command-list">
-        <li>Друк (print) - друкування сторінки.</li>
-        <li>Якщо (if) - щоб вказати блок коду, який має бути виконано, якщо вказана умова є true (вірна).</li>
-        <li>Функція (function) - це блок коду, призначений для виконання певного завдання.</li>
-        <li>Поки (while) - цей цикл виконає блок коду один раз, перед тим, як перевіряти чи правильна умова, потім він
-            буде
-            повторювати цикл, поки умова істинна (true).</li>
+        <li data-bs-toggle="collapse" data-bs-target="#command1" aria-expanded="false" aria-controls="command1">
+            Друк (print) - друкування сторінки.
+            <div id="command1" class="collapse">
+                <div id="editor1" style="height: 200px; width: 100%;">
+ Друк('Світ');
+                </div>
+            </div>
+        </li>
+        <li data-bs-toggle="collapse" data-bs-target="#command2" aria-expanded="false" aria-controls="command2">
+            Якщо (if) - щоб вказати блок коду, який має бути виконано, якщо вказана умова є true (вірна).
+            <div id="command2" class="collapse">
+                <div id="editor2" style="height: 200px; width: 100%;">
+якщо (true) {
+     Друк('Це працює!');
+}
+                </div>
+            </div>
+        </li>
+        <li data-bs-toggle="collapse" data-bs-target="#command3" aria-expanded="false" aria-controls="command3">
+            Функція (function) - це блок коду, призначений для виконання певного завдання.
+            <div id="command3" class="collapse">
+                <div id="editor3" style="height: 200px; width: 100%;">
+Функція привітання(imya) {
+       Друк('Привіт, ' + imya + '!');
+}
+
+привітання('Ніка')
+                </div>
+            </div>
+        </li>
+        <li data-bs-toggle="collapse" data-bs-target="#command4" aria-expanded="false" aria-controls="command4">
+            Поки (while) - цей цикл виконає блок коду один раз, перед тим, як перевіряти чи правильна умова, потім він
+            буде повторювати цикл, поки умова істинна (true).
+            <div id="command4" class="collapse">
+                <div id="editor4" style="height: 200px; width: 100%;">
+Функція рахувати(лічильник) {
+   поки (лічильник > 0) {
+      Друк('Лічильник: ' + лічильник);
+   лічильник--;
+    }
+}
+
+рахувати(5);
+                </div>
+            </div>
+        </li>
     </ul>
 </div>
+
+
 <div class="jupiter planet"></div>
+
+<script>
+    var editor1 = ace.edit("editor1");
+    editor1.setTheme("ace/theme/monokai");
+    editor1.session.setMode("ace/mode/javascript");
+
+    var editor2 = ace.edit("editor2");
+    editor2.setTheme("ace/theme/monokai");
+    editor2.session.setMode("ace/mode/javascript");
+
+    var editor3 = ace.edit("editor3");
+    editor3.setTheme("ace/theme/monokai");
+    editor3.session.setMode("ace/mode/javascript");
+
+    var editor4 = ace.edit("editor4");
+    editor4.setTheme("ace/theme/monokai");
+    editor4.session.setMode("ace/mode/javascript");
+</script>
 	</main>
 	</div>
 	<footer id="footer">
@@ -174,7 +235,6 @@
 			</div>
 		</div>
 	</footer>
-	</script>
 	<script src="js/index.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
