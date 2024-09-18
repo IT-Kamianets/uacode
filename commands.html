@@ -100,71 +100,67 @@
         <li data-bs-toggle="collapse" data-bs-target="#command1" aria-expanded="false" aria-controls="command1">
             Друк (print) - друкування сторінки.
             <div id="command1" class="collapse">
-                <div id="editor1" style="height: 200px; width: 100%;">
- Друк('Світ');
-                </div>
+                <div id="editor1" style="height: 200px; width: 100%;">Друк('Світ');
+</div>
             </div>
         </li>
         <li data-bs-toggle="collapse" data-bs-target="#command2" aria-expanded="false" aria-controls="command2">
             Якщо (if) - щоб вказати блок коду, який має бути виконано, якщо вказана умова є true (вірна).
             <div id="command2" class="collapse">
-                <div id="editor2" style="height: 200px; width: 100%;">
-якщо (true) {
-     Друк('Це працює!');
-}
-                </div>
+                <div id="editor2" style="height: 200px; width: 100%;">якщо (true) {
+    Друк('Це працює!'); 
+}</div>
             </div>
         </li>
         <li data-bs-toggle="collapse" data-bs-target="#command3" aria-expanded="false" aria-controls="command3">
             Функція (function) - це блок коду, призначений для виконання певного завдання.
             <div id="command3" class="collapse">
-                <div id="editor3" style="height: 200px; width: 100%;">
-Функція привітання(imya) {
-       Друк('Привіт, ' + imya + '!');
-}
+                <div id="editor3" style="height: 200px; width: 100%;">Функція привітання(imya) {
+    Друк('Привіт, ' + imya+ '!'); 
+} 
 
-привітання('Ніка')
-                </div>
+привітання('Ніка')</div>
             </div>
         </li>
         <li data-bs-toggle="collapse" data-bs-target="#command4" aria-expanded="false" aria-controls="command4">
             Поки (while) - цей цикл виконає блок коду один раз, перед тим, як перевіряти чи правильна умова, потім він
             буде повторювати цикл, поки умова істинна (true).
             <div id="command4" class="collapse">
-                <div id="editor4" style="height: 200px; width: 100%;">
-Функція рахувати(лічильник) {
-   поки (лічильник > 0) {
-      Друк('Лічильник: ' + лічильник);
-   лічильник--;
-    }
-}
-
-рахувати(5);
-                </div>
+                <div id="editor4" style="height: 200px; width: 100%;">Функція рахувати(лічильник) { 
+поки (лічильник > 0) { 
+    Друк('Лічильник: ' + лічильник); 
+    лічильник--; 
+  } 
+} 
+рахувати(5);</div>
             </div>
         </li>
     </ul>
 </div>
 
-
 <div class="jupiter planet"></div>
 
 <script>
-    var editor1 = ace.edit("editor1");
-    editor1.setTheme("ace/theme/monokai");
-    editor1.session.setMode("ace/mode/javascript");
+    var editors = ['editor1', 'editor2', 'editor3', 'editor4'];
 
-    var editor2 = ace.edit("editor2");
-    editor2.setTheme("ace/theme/monokai");
-    editor2.session.setMode("ace/mode/javascript");
+    editors.forEach(function (editor) {
+        var aceEditor = ace.edit(editor);
+        aceEditor.setTheme("ace/theme/monokai");
+        aceEditor.session.setMode("ace/mode/javascript");
+    });
 
-    var editor3 = ace.edit("editor3");
-    editor3.setTheme("ace/theme/monokai");
-    editor3.session.setMode("ace/mode/javascript");
+    var collapses = document.querySelectorAll('.collapse');
 
-    var editor4 = ace.edit("editor4");
-    editor4.setTheme("ace/theme/monokai");
-    editor4.session.setMode("ace/mode/javascript");
+    collapses.forEach(function (collapse) {
+        collapse.addEventListener('show.bs.collapse', function () {
+            collapses.forEach(function (otherCollapse) {
+                if (otherCollapse !== collapse) {
+                    var bsCollapse = new bootstrap.Collapse(otherCollapse, { toggle: false });
+                    bsCollapse.hide();
+                }
+            });
+        });
+    });
 </script>
 	</main>
 	</div>
