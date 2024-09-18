@@ -94,42 +94,53 @@
 
 
 	<main class="main-content__section">
-		<div class="container example-block">
-    <h3 style="color: aliceblue;">Команда: Якщо</h3>
-    <div class="text-block">
-        <pre>якщо (true) {
-            Друк('Це працює!');
-            }
-        </pre>
+		<div class="container example-block" style="margin-top: 80px;">
+    <div class="row" style="margin-bottom: 40px;">
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Друк"</h5>
+            <div id="editor1" style="height: 200px; width: 400px;">Друк('Світ');</div>
+
+        </div>
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Якщо"</h5>
+            <div id="editor2" style="height: 200px; width: 400px;">якщо (true) {
+    Друк('Це працює!');
+}</div>
+        </div>
     </div>
-    <h3 style="color: aliceblue;">Команда: Друк</h3>
-    <div class="text-block">
-        <pre>Друк('Світ');
-        </pre>
-    </div>
-    <h3 style="color: aliceblue;">Команда: Функція</h3>
-    <div class="text-block">
-        <pre>Функція привітання(imya) {
-            Друк('Привіт, ' + imya + '!');
-        }
-        
-        привітання('Ніка')
-        </pre>
-    </div>
-    <h3 style="color: aliceblue;">Команда: Поки</h3>
-    <div class="text-block">
-        <pre>Функція рахувати(лічильник) {
-            поки (лічильник > 0) {
-                Друк('Лічильник: ' + лічильник);
-                лічильник--;
-            }
-        }
-        
-        рахувати(5);
-        </pre>
+    <div class="row">
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Функція"</h5>
+            <div id="editor3" style="height: 200px; width: 400px;">Функція привітання(imya) {
+    Друк('Привіт, ' + imya + '!');
+}
+
+привітання('Ніка')</div>
+        </div>
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Поки"</h5>
+            <div id="editor4" style="height: 200px; width: 400px;">Функція рахувати(лічильник) {
+  поки (лічильник > 0) {
+    Друк('Лічильник: ' + лічильник);
+лічильник--;
+  }
+}
+рахувати(5);</div>
+        </div>
     </div>
 </div>
+
 <div class="jupiter planet"></div>
+
+<script>
+    var editors = ['editor1', 'editor2', 'editor3', 'editor4'];
+
+    editors.forEach(function (editor) {
+        var aceEditor = ace.edit(document.getElementById(editor));
+        aceEditor.setTheme("ace/theme/monokai");
+        aceEditor.session.setMode("ace/mode/javascript");
+    });
+</script>
 	</main>
 	</div>
 	<footer id="footer">
