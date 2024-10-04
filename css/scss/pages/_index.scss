@@ -280,7 +280,8 @@ footer::before {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
+	margin-top: 1vh;
 }
 
 a {
@@ -291,7 +292,6 @@ a {
 .link {
     width: calc(0.8 * var(--m));
     height: calc(0.8 * var(--m));
-    background-color: rgba(255, 255, 255, 0.1);
     border-radius: calc(0.1 * var(--m));
 
     display: flex;
@@ -308,7 +308,7 @@ a {
 @media screen and (max-width: 700px) {
     footer {
         width: 100%;
-        min-height: 50vh;
+        min-height: 30vh;
 
         flex-direction: row;
         gap: 20px;
@@ -317,4 +317,5 @@ a {
 
 .text-color {
     color: aliceblue;
+	font-size: 2vh;
 }
