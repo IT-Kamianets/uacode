@@ -39,13 +39,45 @@
 рахувати(5);</div>
             </div>
         </li>
+        <li data-bs-toggle="collapse" data-bs-target="#command5" aria-expanded="false" aria-controls="command5">
+            Змінна (var) - оголошення змінної, яку можна змінювати.
+            <div id="command5" class="collapse">
+                <div id="editor5" style="height: 200px; width: 100%;">змінна назва = 'Ніка'; 
+Друк('Мене звати: ' + назва);</div>
+            </div>
+        </li>
+        <li data-bs-toggle="collapse" data-bs-target="#command6" aria-expanded="false" aria-controls="command6">
+            Константа (const) - оголошення незмінної константи.
+            <div id="command6" class="collapse">
+                <div id="editor6" style="height: 200px; width: 100%;">константа рік = 2024;
+Друк('Цей рік: ' + рік);</div>
+            </div>
+        </li>
+        <li data-bs-toggle="collapse" data-bs-target="#command7" aria-expanded="false" aria-controls="command7">
+            Для (for) - цикл, що повторюється певну кількість разів.
+            <div id="command7" class="collapse">
+                <div id="editor7" style="height: 200px; width: 100%;">для (змінна i = 0; i < 5; i++) {
+    Друк('Крок ' + i);
+}</div>
+            </div>
+        </li>
+        <li data-bs-toggle="collapse" data-bs-target="#command8" aria-expanded="false" aria-controls="command8">
+            Логічні оператори (і, або) - виконання умов на основі кількох умов.
+            <div id="command8" class="collapse">
+                <div id="editor8" style="height: 200px; width: 100%;">якщо (true і true) {
+    Друк('Обидві умови істинні');
+} інакше {
+    Друк('Одна з умов хибна');
+}</div>
+            </div>
+        </li>
     </ul>
 </div>
 
 <div class="jupiter planet"></div>
 
 <script>
-    var editors = ['editor1', 'editor2', 'editor3', 'editor4'];
+    var editors = ['editor1', 'editor2', 'editor3', 'editor4', 'editor5', 'editor6', 'editor7', 'editor8'];
 
     editors.forEach(function (editor) {
         var aceEditor = ace.edit(editor);

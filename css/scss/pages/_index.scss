@@ -202,12 +202,10 @@ body {
 .text-overlay {
 	position: relative;
 	z-index: 10;
-	/* Текст поверх планети */
 	width: 100%;
 	text-align: center;
 	color: rgb(255, 255, 255);
-	margin-top: 20vh;
-	/* Задаємо відступ від верхньої частини вікна */
+	margin-top:30vh;
 }
 
 .text-overlay p {

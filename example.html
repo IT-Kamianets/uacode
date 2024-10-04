@@ -99,7 +99,6 @@
         <div class="col-md-6">
             <h5 style="color: aliceblue; text-align: center;">"Друк"</h5>
             <div id="editor1" style="height: 200px; width: 350px;">Друк('Світ');</div>
-
         </div>
         <div class="col-md-6">
             <h5 style="color: aliceblue; text-align: center;">"Якщо"</h5>
@@ -108,13 +107,12 @@
 }</div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin-bottom: 40px;">
         <div class="col-md-6">
             <h5 style="color: aliceblue; text-align: center;">"Функція"</h5>
             <div id="editor3" style="height: 200px; width: 350px;">Функція привітання(imya) {
     Друк('Привіт, ' + imya + '!');
 }
-
 привітання('Ніка')</div>
         </div>
         <div class="col-md-6">
@@ -122,10 +120,38 @@
             <div id="editor4" style="height: 200px; width: 350px;">Функція рахувати(лічильник) {
   поки (лічильник > 0) {
     Друк('Лічильник: ' + лічильник);
-лічильник--;
+    лічильник--;
   }
 }
 рахувати(5);</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Змінна"</h5>
+            <div id="editor5" style="height: 200px; width: 350px;">змінна назва = 'Ніка'; 
+Друк('Мене звати: ' + назва);</div>
+        </div>
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Константа"</h5>
+            <div id="editor6" style="height: 200px; width: 350px;">константа рік = 2024;
+Друк('Цей рік: ' + рік);</div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Для"</h5>
+            <div id="editor7" style="height: 200px; width: 350px;">для (змінна i = 0; i < 5; i++) {
+    Друк('Крок ' + i);
+}</div>
+        </div>
+        <div class="col-md-6">
+            <h5 style="color: aliceblue; text-align: center;">"Логічні оператори (і, або)"</h5>
+            <div id="editor8" style="height: 200px; width: 350px;">якщо (true і true) {
+    Друк('Обидві умови істинні');
+} інакше {
+    Друк('Одна з умов хибна');
+}</div>
         </div>
     </div>
 </div>
@@ -133,7 +159,7 @@
 <div class="jupiter planet"></div>
 
 <script>
-    var editors = ['editor1', 'editor2', 'editor3', 'editor4'];
+    var editors = ['editor1', 'editor2', 'editor3', 'editor4', 'editor5', 'editor6', 'editor7', 'editor8'];
 
     editors.forEach(function (editor) {
         var aceEditor = ace.edit(document.getElementById(editor));
@@ -141,6 +167,7 @@
         aceEditor.session.setMode("ace/mode/javascript");
     });
 </script>
+
 	</main>
 	</div>
 	<footer id="footer">

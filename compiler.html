@@ -96,7 +96,6 @@
 	<main class="main-content__section">
 		<div class="container compiler-block">
 
-
     <div class="row">
         <div class="col-md-6">
             <h3 style="color: aliceblue;">Компілятор:</h3>
@@ -112,7 +111,6 @@
 
 <div class="jupiter planet"></div>
 
-
 <script>
     const consoleOutput = document.getElementById('consoleOutput');
 
@@ -123,18 +121,35 @@
     function compile() {
         consoleOutput.textContent = '';
 
-        const ukrainianCode = document.getElementById('code').value;
+        let ukrainianCode = document.getElementById('code').value;
 
         const translations = {
             'Друк': 'print',
             'якщо': 'if',
             'Функція': 'function',
             'поки': 'while',
+            'змінна': 'var',
+            'константа': 'const',
+            'для': 'for',
+            'інакше': 'else'
+        };
+
+        // Заміна логічних операторів, але тільки якщо вони відокремлені пробілами
+        let logicalOperators = {
+            ' і ': ' && ',
+            ' або ': ' || '
         };
 
         let translatedCode = ukrainianCode.trim();
+
+        // Застосовуємо переклади для ключових слів
         for (const [uaCmd, jsCmd] of Object.entries(translations)) {
             translatedCode = translatedCode.split(uaCmd).join(jsCmd);
+        }
+
+        // Застосовуємо переклади для логічних операторів
+        for (const [uaCmd, jsCmd] of Object.entries(logicalOperators)) {
+            translatedCode = translatedCode.replace(uaCmd, jsCmd);
         }
 
         try {
@@ -144,7 +159,7 @@
         }
     }
 </script>
-</script>
+
 	</main>
 	</div>
 	<footer id="footer">
