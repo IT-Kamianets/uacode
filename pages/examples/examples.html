@@ -1,73 +1,361 @@
-<div class="container example-block" style="margin-top: 80px;">
-    <div class="row" style="margin-bottom: 40px;">
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Друк"</h5>
-            <div id="editor1" style="height: 200px; width: 350px;">Друк('Світ');</div>
-        </div>
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Якщо"</h5>
-            <div id="editor2" style="height: 200px; width: 350px;">якщо (true) {
-    Друк('Це працює!');
-}</div>
-        </div>
-    </div>
-    <div class="row" style="margin-bottom: 40px;">
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Функція"</h5>
-            <div id="editor3" style="height: 200px; width: 350px;">Функція привітання(imya) {
-    Друк('Привіт, ' + imya + '!');
-}
-привітання('Ніка')</div>
-        </div>
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Поки"</h5>
-            <div id="editor4" style="height: 200px; width: 350px;">Функція рахувати(лічильник) {
-  поки (лічильник > 0) {
-    Друк('Лічильник: ' + лічильник);
-    лічильник--;
-  }
-}
-рахувати(5);</div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Змінна"</h5>
-            <div id="editor5" style="height: 200px; width: 350px;">змінна назва = 'Ніка'; 
-Друк('Мене звати: ' + назва);</div>
-        </div>
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Константа"</h5>
-            <div id="editor6" style="height: 200px; width: 350px;">константа рік = 2024;
-Друк('Цей рік: ' + рік);</div>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 40px;">
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Для"</h5>
-            <div id="editor7" style="height: 200px; width: 350px;">для (змінна i = 0; i < 5; i++) {
-    Друк('Крок ' + i);
-}</div>
-        </div>
-        <div class="col-md-6">
-            <h5 style="color: aliceblue; text-align: center;">"Логічні оператори (і, або)"</h5>
-            <div id="editor8" style="height: 200px; width: 350px;">якщо (true і true) {
-    Друк('Обидві умови істинні');
-} інакше {
-    Друк('Одна з умов хибна');
-}</div>
-        </div>
-    </div>
+<div class="container example-block" style="margin-top: 80px">
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Друк"</h5>
+			<div id="editor1" style="height: 200px; width: 350px">
+				Друк('Світ');
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Якщо"</h5>
+			<div id="editor2" style="height: 200px; width: 350px">
+				якщо (true) { Друк('Це працює!'); }
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Функція"</h5>
+			<div id="editor3" style="height: 200px; width: 350px">
+				Функція привітання(imya) { Друк('Привіт, ' + imya + '!'); }
+				привітання('Ніка')
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Поки"</h5>
+			<div id="editor4" style="height: 200px; width: 350px">
+				Функція рахувати(лічильник) { поки (лічильник > 0) {
+				Друк('Лічильник: ' + лічильник); лічильник--; } } рахувати(5);
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Змінна"</h5>
+			<div id="editor5" style="height: 200px; width: 350px">
+				змінна назва = 'Ніка'; Друк('Мене звати: ' + назва);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Константа"</h5>
+			<div id="editor6" style="height: 200px; width: 350px">
+				константа рік = 2024; Друк('Цей рік: ' + рік);
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Для"</h5>
+			<div id="editor7" style="height: 200px; width: 350px">
+				для (змінна i = 0; i < 5; i++) { Друк('Крок ' + i); }
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				Логічні оператори "та", "або"
+			</h5>
+			<div id="editor8" style="height: 200px; width: 350px">
+				якщо (true та true) { Друк('Обидві умови істинні'); } інакше {
+				Друк('Одна з умов хибна'); }
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Зупинити"</h5>
+			<div id="editor9" style="height: 200px; width: 350px">
+				Для (Змінна i = 0; i < 5; i++) { Якщо (i === 3) { Зупинити; }
+				Друк('i: ' + i); }
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Пропустити"</h5>
+			<div id="editor10" style="height: 200px; width: 350px">
+				Для (Змінна i = 0; i < 5; i++) { Якщо (i === 2) { Пропустити; }
+				Друк('Крок: ' + i); }
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Попередження"</h5>
+			<div id="editor11" style="height: 200px; width: 350px">
+				Попередження('Привіт, це повідомлення для тебе!');
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"ВипадковеЧисло"
+			</h5>
+			<div id="editor12" style="height: 200px; width: 350px">
+				Змінна випадкове = ВипадковеЧисло(); Друк('Випадкове число: ' +
+				випадкове);
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Дата"</h5>
+			<div id="editor13" style="height: 200px; width: 350px">
+				Змінна сьогодні = Нова Дата(); Друк('Сьогоднішня дата: ' +
+				сьогодні);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Зараз"</h5>
+			<div id="editor14" style="height: 200px; width: 350px">
+				Друк('Час зараз: ' + Зараз());
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Округлення"</h5>
+			<div id="editor15" style="height: 200px; width: 350px">
+				Друк('Округлити 4.6: ' + Округлити(4.6)); Друк('Підлога 4.9: ' +
+				Підлога(4.9)); Друк('Стеля 4.1: ' + Стеля(4.1));
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"Мінімум / Максимум"
+			</h5>
+			<div id="editor16" style="height: 200px; width: 350px">
+				Друк('Мінімум з 3 і 8: ' + Мінімум(3, 8)); Друк('Максимум з 3 і
+				8: ' + Максимум(3, 8));
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Корінь"</h5>
+			<div id="editor17" style="height: 200px; width: 350px">
+				Змінна корінь = Корінь(25); Друк('Корінь з 25: ' + корінь);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Степінь"</h5>
+			<div id="editor18" style="height: 200px; width: 350px">
+				Друк('2 в степені 3: ' + Степінь(2, 3));
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Довжина"</h5>
+			<div id="editor19" style="height: 200px; width: 350px">
+				Змінна текст = 'Привіт'; Друк('Довжина: ' + текст.Довжина);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"Великими / Малими"
+			</h5>
+			<div id="editor20" style="height: 200px; width: 350px">
+				Змінна ім'я = 'оля'; Друк('Великими: ' + ім'я.Великими());
+				Друк('Малими: ' + ім'я.Малими());
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"ЦілеЧисло / Число"
+			</h5>
+			<div id="editor21" style="height: 200px; width: 350px">
+				Змінна рядок1 = '42'; Змінна рядок2 = '3.14'; Друк('parseInt: '
+				+ ЦілеЧисло(рядок1)); Друк('parseFloat: ' + Число(рядок2));
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Масив"</h5>
+			<div id="editor22" style="height: 200px; width: 350px">
+				Змінна список = Масив; список.Додати('яблуко');
+				список.Додати('банан'); Друк('Масив: ' + список);
+				список.ВидалитиОстанній(); Друк('Після видалення: ' + список);
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Об'єкт"</h5>
+			<div id="editor23" style="height: 200px; width: 350px">
+				Змінна учень = Об'єкт; учень.ім'я = 'Оля'; учень.вік = 10;
+				Друк('Ключі: ' + Ключі(учень)); Друк('Значення: ' +
+				Значення(учень)); Друк('Пари: ' + Пари(учень));
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"ЄКлюч / Видалити"
+			</h5>
+			<div id="editor24" style="height: 200px; width: 350px">
+				Змінна дані = Об'єкт; дані.місто = 'Київ'; Якщо ('місто' ЄКлюч
+				дані) { Друк('Місто знайдено: ' + дані.місто); } Видалити
+				дані.місто; Друк('Після видалення: ' + дані);
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Дата"</h5>
+			<div id="editor25" style="height: 200px; width: 350px">
+				Змінна сьогодні = Нова Дата(); Друк('Сьогоднішня дата: ' +
+				сьогодні);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Зараз"</h5>
+			<div id="editor26" style="height: 200px; width: 350px">
+				Друк('Час зараз: ' + Зараз());
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="jupiter planet"></div>
 
 <script>
-    var editors = ['editor1', 'editor2', 'editor3', 'editor4', 'editor5', 'editor6', 'editor7', 'editor8'];
+	const editorContents = {
+		editor1: `Друк('Світ');`,
 
-    editors.forEach(function (editor) {
-        var aceEditor = ace.edit(document.getElementById(editor));
-        aceEditor.setTheme("ace/theme/monokai");
-        aceEditor.session.setMode("ace/mode/javascript");
-    });
+		editor2: `Якщо (true) {
+  Друк('Це працює!');
+}`,
+
+		editor3: `Функція привітання(імя) {
+  Друк('Привіт, ' + імя + '!');
+}
+
+привітання('Ніка');`,
+
+		editor4: `Функція рахувати(лічильник) {
+  Поки (лічильник > 0) {
+    Друк('Лічильник: ' + лічильник);
+
+    лічильник--;
+  }
+}
+
+рахувати(5);`,
+
+		editor5: `Змінна назва = 'Ніка';
+
+Друк('Мене звати: ' + назва);`,
+
+		editor6: `константа рік = 2024;
+
+Друк('Цей рік: ' + рік);`,
+
+		editor7: `Для (Змінна i = 0; i < 5; i++) {
+  Друк('Крок ' + i);
+}`,
+
+		editor8: `Якщо (true та true) {
+  Друк('Обидві умови істинні');
+} Інакше якщо (false або true) {
+  Друк('Одна з умов істинна');
+} Інакше {
+  Друк('Усі умови хибні');
+}`,
+
+		editor9: `Для (Змінна i = 0; i < 5; i++) {
+  Якщо (i === 3) {
+    Зупинити;
+  }
+
+  Друк('i: ' + i);
+}`,
+
+		editor10: `Для (Змінна i = 0; i < 5; i++) {
+  Якщо (i === 2) {
+    Пропустити;
+  }
+
+  Друк('Крок: ' + i);
+}`,
+
+		editor11: `Попередження('Привіт, це повідомлення для тебе!');`,
+
+		editor12: `Змінна випадкове = ВипадковеЧисло();
+
+Друк('Випадкове число: ' + випадкове);`,
+
+		editor13: `Змінна сьогодні = Нова Дата();
+
+Друк('Сьогоднішня дата: ' + сьогодні);`,
+
+		editor14: `Друк('Час зараз: ' + Зараз());`,
+
+		editor15: `Друк('Округлити 4.6: ' + Округлити(4.6));
+
+Друк('Підлога 4.9: ' + Підлога(4.9));
+
+Друк('Стеля 4.1: ' + Стеля(4.1));`,
+
+		editor16: `Друк('Мінімум з 3 і 8: ' + Мінімум(3, 8));
+
+Друк('Максимум з 3 і 8: ' + Максимум(3, 8));`,
+		editor17: `Змінна корінь = Корінь(25);
+Друк('Корінь з 25: ' + корінь);`,
+
+		editor18: `Друк('2 в степені 3: ' + Степінь(2, 3));`,
+
+		editor19: `Змінна текст = 'Привіт';
+Друк('Довжина: ' + текст.Довжина);`,
+
+		editor20: `Змінна ім'я = 'оля';
+Друк('Великими: ' + ім'я.Великими());
+Друк('Малими: ' + ім'я.Малими());`,
+
+		editor21: `Змінна рядок1 = '42';
+Змінна рядок2 = '3.14';
+Друк('parseInt: ' + ЦілеЧисло(рядок1));
+Друк('parseFloat: ' + Число(рядок2));`,
+
+		editor22: `Змінна список = Масив;
+список.Додати('яблуко');
+список.Додати('банан');
+Друк('Масив: ' + список);
+список.ВидалитиОстанній();
+Друк('Після видалення: ' + список);`,
+
+		editor23: `Змінна учень = Об'єкт;
+учень.ім'я = 'Оля';
+учень.вік = 10;
+Друк('Ключі: ' + Ключі(учень));
+Друк('Значення: ' + Значення(учень));
+Друк('Пари: ' + Пари(учень));`,
+
+		editor24: `Змінна дані = Об'єкт;
+дані.місто = 'Київ';
+
+Якщо ('місто' ЄКлюч дані) {
+  Друк('Місто знайдено: ' + дані.місто);
+}
+
+Видалити дані.місто;
+Друк('Після видалення: ' + дані);`,
+	};
+
+	Object.keys(editorContents).forEach((id) => {
+		const editor = ace.edit(document.getElementById(id));
+		editor.setTheme("ace/theme/monokai");
+		editor.session.setMode("ace/mode/javascript");
+		editor.setValue(editorContents[id], -1); // -1 moves cursor to top
+		editor.setOptions({
+			readOnly: true,
+			highlightActiveLine: false,
+			highlightGutterLine: false,
+		});
+		editor.renderer.$cursorLayer.element.style.display = "none"; // hide cursor
+	});
 </script>

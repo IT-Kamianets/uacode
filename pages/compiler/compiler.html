@@ -1,65 +1,113 @@
 <div class="container compiler-block">
-
-    <div class="row">
-        <div class="col-md-6">
-            <h3 style="color: aliceblue;">Компілятор:</h3>
-            <textarea id="code" rows="10" cols="50" placeholder="Введіть український код..."></textarea><br>
-        </div>
-        <div class="col-md-6">
-            <h3 style="color: aliceblue;">Консольний вивід:</h3>
-            <pre id="consoleOutput"></pre>
-        </div>
-    </div>
-    <button onclick="compile()">Запустити код</button>
+	<div class="row">
+		<div class="col-md-6">
+			<h3 style="color: aliceblue">Компілятор:</h3>
+			<textarea
+				id="code"
+				rows="10"
+				cols="50"
+				placeholder="Введіть український код..."
+			></textarea
+			><br />
+		</div>
+		<div class="col-md-6">
+			<h3 style="color: aliceblue">Консольний вивід:</h3>
+			<pre id="consoleOutput"></pre>
+		</div>
+	</div>
+	<button onclick="compile()">Запустити код</button>
 </div>
 
 <div class="jupiter planet"></div>
 
 <script>
-    const consoleOutput = document.getElementById('consoleOutput');
+	const consoleOutput = document.getElementById("consoleOutput");
 
-    function print(message) {
-        consoleOutput.textContent += message + '\n';
-    }
+	function print(message) {
+		consoleOutput.textContent += message + "\n";
+	}
 
-    function compile() {
-        consoleOutput.textContent = '';
+	function compile() {
+		consoleOutput.textContent = "";
 
-        let ukrainianCode = document.getElementById('code').value;
+		let ukrainianCode = document.getElementById("code").value;
 
-        const translations = {
-            'Друк': 'print',
-            'якщо': 'if',
-            'Функція': 'function',
-            'поки': 'while',
-            'змінна': 'var',
-            'константа': 'const',
-            'для': 'for',
-            'інакше': 'else'
-        };
+		const translations = {
+			// 🔁 Control flow
+			Друк: "print", // Вивести повідомлення
+			Якщо: "if", // Умова
+			"Інакше якщо": "else if", // Додаткова умова
+			Інакше: "else", // Інакше
+			Поки: "while", // Цикл з умовою
+			Для: "for", // Цикл з лічильником
+			Зупинити: "break", // Вийти з циклу
+			Пропустити: "continue", // Пропустити ітерацію
 
-        // Заміна логічних операторів, але тільки якщо вони відокремлені пробілами
-        let logicalOperators = {
-            ' і ': ' && ',
-            ' або ': ' || '
-        };
+			// 🔧 Variables & functions
+			Функція: "function", // Оголошення функції
+			Змінна: "var", // Змінна
+			Константа: "const", // Константа
 
-        let translatedCode = ukrainianCode.trim();
+			// ⚠️ Interactivity
+			Попередження: "alert", // Повідомлення
 
-        // Застосовуємо переклади для ключових слів
-        for (const [uaCmd, jsCmd] of Object.entries(translations)) {
-            translatedCode = translatedCode.split(uaCmd).join(jsCmd);
-        }
+			// 🎲 Math
+			ВипадковеЧисло: "Math.random", // Число від 0 до 1
+			Округлити: "Math.round", // Округлення
+			Підлога: "Math.floor", // Округлення вниз
+			Стеля: "Math.ceil", // Округлення вгору
+			Мінімум: "Math.min", // Мінімум
+			Максимум: "Math.max", // Максимум
+			Корінь: "Math.sqrt", // Квадратний корінь
+			Степінь: "Math.pow", // Піднести до степеня
 
-        // Застосовуємо переклади для логічних операторів
-        for (const [uaCmd, jsCmd] of Object.entries(logicalOperators)) {
-            translatedCode = translatedCode.replace(uaCmd, jsCmd);
-        }
+			// 🕒 Date & Time
+			Дата: "Date", // Об’єкт дати
+			Зараз: "Date.now", // Поточний час
 
-        try {
-            eval(translatedCode);
-        } catch (error) {
-            print("Помилка в коді: " + error.message);
-        }
-    }
+			// 🔤 Strings & numbers
+			Довжина: "length", // Довжина рядка або масиву
+			Великими: "toUpperCase", // Великі літери
+			Малими: "toLowerCase", // Малі літери
+			ЦілеЧисло: "parseInt", // Перетворити в ціле число
+			Число: "parseFloat", // Перетворити в число
+
+			// 📦 Arrays
+			Масив: "[]", // Порожній масив
+			Додати: "push", // Додати до масиву
+			ВидалитиОстанній: "pop", // Видалити останній
+
+			// 🧱 Objects
+			"Об'єкт": "{}", // Порожній об’єкт
+			Ключі: "Object.keys", // Ключі об’єкта
+			Значення: "Object.values", // Значення об’єкта
+			Пари: "Object.entries", // Пари ключ-значення
+			ЄКлюч: "in", // Чи є ключ в об’єкті
+			Видалити: "delete", // Видалити ключ
+		};
+
+		// Заміна логічних операторів, але тільки якщо вони відокремлені пробілами
+		let logicalOperators = {
+			" та ": " && ",
+			" або ": " || ",
+		};
+
+		let translatedCode = ukrainianCode.trim();
+
+		// Застосовуємо переклади для ключових слів
+		for (const [uaCmd, jsCmd] of Object.entries(translations)) {
+			translatedCode = translatedCode.split(uaCmd).join(jsCmd);
+		}
+
+		// Застосовуємо переклади для логічних операторів
+		for (const [uaCmd, jsCmd] of Object.entries(logicalOperators)) {
+			translatedCode = translatedCode.replace(uaCmd, jsCmd);
+		}
+
+		try {
+			eval(translatedCode);
+		} catch (error) {
+			print("Помилка в коді: " + error.message);
+		}
+	}
 </script>

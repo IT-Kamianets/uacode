@@ -1,100 +1,519 @@
 <div class="container commands-block">
-    <h3 style="color: aliceblue;">Список команд:</h3>
-    <ul class="command-list">
-        <li data-bs-toggle="collapse" data-bs-target="#command1" aria-expanded="false" aria-controls="command1">
-            Друк (print) - друкування сторінки.
-            <div id="command1" class="collapse">
-                <div id="editor1" style="height: 200px; width: 100%;">Друк('Світ');
-</div>
-            </div>
-        </li>
-        <li data-bs-toggle="collapse" data-bs-target="#command2" aria-expanded="false" aria-controls="command2">
-            Якщо (if) - щоб вказати блок коду, який має бути виконано, якщо вказана умова є true (вірна).
-            <div id="command2" class="collapse">
-                <div id="editor2" style="height: 200px; width: 100%;">якщо (true) {
-    Друк('Це працює!'); 
-}</div>
-            </div>
-        </li>
-        <li data-bs-toggle="collapse" data-bs-target="#command3" aria-expanded="false" aria-controls="command3">
-            Функція (function) - це блок коду, призначений для виконання певного завдання.
-            <div id="command3" class="collapse">
-                <div id="editor3" style="height: 200px; width: 100%;">Функція привітання(imya) {
-    Друк('Привіт, ' + imya+ '!'); 
-} 
+	<h3 style="color: aliceblue">Список команд:</h3>
+	<ul class="command-list">
+		<li>
+			<span
+				data-bs-target="#command1"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command1"
+				>Друк (print) — друкування.</span
+			>
+			<div id="command1" class="collapse">
+				<div id="editor1" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
 
-привітання('Ніка')</div>
-            </div>
-        </li>
-        <li data-bs-toggle="collapse" data-bs-target="#command4" aria-expanded="false" aria-controls="command4">
-            Поки (while) - цей цикл виконає блок коду один раз, перед тим, як перевіряти чи правильна умова, потім він
-            буде повторювати цикл, поки умова істинна (true).
-            <div id="command4" class="collapse">
-                <div id="editor4" style="height: 200px; width: 100%;">Функція рахувати(лічильник) { 
-поки (лічильник > 0) { 
-    Друк('Лічильник: ' + лічильник); 
-    лічильник--; 
-  } 
-} 
-рахувати(5);</div>
-            </div>
-        </li>
-        <li data-bs-toggle="collapse" data-bs-target="#command5" aria-expanded="false" aria-controls="command5">
-            Змінна (var) - оголошення змінної, яку можна змінювати.
-            <div id="command5" class="collapse">
-                <div id="editor5" style="height: 200px; width: 100%;">змінна назва = 'Ніка'; 
-Друк('Мене звати: ' + назва);</div>
-            </div>
-        </li>
-        <li data-bs-toggle="collapse" data-bs-target="#command6" aria-expanded="false" aria-controls="command6">
-            Константа (const) - оголошення незмінної константи.
-            <div id="command6" class="collapse">
-                <div id="editor6" style="height: 200px; width: 100%;">константа рік = 2024;
-Друк('Цей рік: ' + рік);</div>
-            </div>
-        </li>
-        <li data-bs-toggle="collapse" data-bs-target="#command7" aria-expanded="false" aria-controls="command7">
-            Для (for) - цикл, що повторюється певну кількість разів.
-            <div id="command7" class="collapse">
-                <div id="editor7" style="height: 200px; width: 100%;">для (змінна i = 0; i < 5; i++) {
-    Друк('Крок ' + i);
-}</div>
-            </div>
-        </li>
-        <li data-bs-toggle="collapse" data-bs-target="#command8" aria-expanded="false" aria-controls="command8">
-            Логічні оператори (і, або) - виконання умов на основі кількох умов.
-            <div id="command8" class="collapse">
-                <div id="editor8" style="height: 200px; width: 100%;">якщо (true і true) {
-    Друк('Обидві умови істинні');
-} інакше {
-    Друк('Одна з умов хибна');
-}</div>
-            </div>
-        </li>
-    </ul>
+		<li>
+			<span
+				data-bs-toggle="collapse"
+				data-bs-target="#command2"
+				aria-expanded="false"
+				aria-controls="command2"
+				>Якщо (if) — умовне виконання коду.</span
+			>
+
+			<div id="command2" class="collapse">
+				<div id="editor2" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-toggle="collapse"
+				data-bs-target="#command3"
+				aria-expanded="false"
+				aria-controls="command3"
+			>
+				Функція (function) — блок коду для повторного використання.
+			</span>
+			<div id="command3" class="collapse">
+				<div id="editor3" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-toggle="collapse"
+				data-bs-target="#command4"
+				aria-expanded="false"
+				aria-controls="command4"
+			>
+				Поки (while) — повторення, доки умова істинна.
+			</span>
+			<div id="command4" class="collapse">
+				<div id="editor4" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-toggle="collapse"
+				data-bs-target="#command5"
+				aria-expanded="false"
+				aria-controls="command5"
+			>
+				Змінна (var) — змінна, значення якої можна змінити.
+			</span>
+			<div id="command5" class="collapse">
+				<div id="editor5" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-toggle="collapse"
+				data-bs-target="#command6"
+				aria-expanded="false"
+				aria-controls="command6"
+			>
+				Константа (const) — незмінне значення.
+			</span>
+			<div id="command6" class="collapse">
+				<div id="editor6" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-toggle="collapse"
+				data-bs-target="#command7"
+				aria-expanded="false"
+				aria-controls="command7"
+			>
+				Для (for) — цикл з лічильником.
+			</span>
+			<div id="command7" class="collapse">
+				<div id="editor7" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-toggle="collapse"
+				data-bs-target="#command8"
+				aria-expanded="false"
+				aria-controls="command8"
+			>
+				Логічні оператори (та, або) — перевірка кількох умов.
+			</span>
+			<div id="command8" class="collapse">
+				<div id="editor8" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command9"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command9"
+			>
+				Зупинити (break) — вихід із циклу.
+			</span>
+			<div id="command9" class="collapse">
+				<div id="editor9" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command10"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command10"
+			>
+				Пропустити (continue) — пропускає одну ітерацію циклу.
+			</span>
+			<div id="command10" class="collapse">
+				<div id="editor10" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command11"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command11"
+			>
+				Попередження (alert) — показує повідомлення.
+			</span>
+			<div id="command11" class="collapse">
+				<div id="editor11" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command12"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command12"
+			>
+				ВипадковеЧисло (Math.random) — випадкове число від 0 до 1.
+			</span>
+			<div id="command12" class="collapse">
+				<div id="editor12" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command13"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command13"
+			>
+				Дата (Date) — створення об’єкта дати.
+			</span>
+			<div id="command13" class="collapse">
+				<div id="editor13" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command14"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command14"
+			>
+				Зараз (Date.now) — поточний час в мілісекундах.
+			</span>
+			<div id="command14" class="collapse">
+				<div id="editor14" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command15"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command15"
+			>
+				Округлення — округлення чисел: round, floor, ceil.
+			</span>
+			<div id="command15" class="collapse">
+				<div id="editor15" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command16"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command16"
+			>
+				Мінімум / Максимум — пошук найменшого або найбільшого значення.
+			</span>
+			<div id="command16" class="collapse">
+				<div id="editor16" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command17"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command17"
+			>
+				Корінь — обчислення квадратного кореня з числа.
+			</span>
+			<div id="command17" class="collapse">
+				<div id="editor17" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command18"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command18"
+			>
+				Степінь — піднесення числа до степеня.
+			</span>
+			<div id="command18" class="collapse">
+				<div id="editor18" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command19"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command19"
+			>
+				Довжина — визначення довжини рядка або масиву.
+			</span>
+			<div id="command19" class="collapse">
+				<div id="editor19" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command20"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command20"
+			>
+				Великими / Малими — зміна регістру символів у рядку.
+			</span>
+			<div id="command20" class="collapse">
+				<div id="editor20" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command21"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command21"
+			>
+				ЦілеЧисло / Число — перетворення тексту в число.
+			</span>
+			<div id="command21" class="collapse">
+				<div id="editor21" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command22"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command22"
+			>
+				Масив — створення та зміна списків.
+			</span>
+			<div id="command22" class="collapse">
+				<div id="editor22" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command23"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command23"
+			>
+				Об'єкт — робота з парою ключ-значення.
+			</span>
+			<div id="command23" class="collapse">
+				<div id="editor23" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+
+		<li>
+			<span
+				data-bs-target="#command24"
+				data-bs-toggle="collapse"
+				aria-expanded="false"
+				aria-controls="command24"
+			>
+				ЄКлюч / Видалити — перевірка та видалення ключів об'єкта.
+			</span>
+			<div id="command24" class="collapse">
+				<div id="editor24" style="height: 200px; width: 100%"></div>
+			</div>
+		</li>
+	</ul>
 </div>
 
 <div class="jupiter planet"></div>
 
 <script>
-    var editors = ['editor1', 'editor2', 'editor3', 'editor4', 'editor5', 'editor6', 'editor7', 'editor8'];
+	const editorContents = {
+		editor1: `Друк('Світ');`,
 
-    editors.forEach(function (editor) {
-        var aceEditor = ace.edit(editor);
-        aceEditor.setTheme("ace/theme/monokai");
-        aceEditor.session.setMode("ace/mode/javascript");
-    });
+		editor2: `Якщо (true) {
+  Друк('Це працює!');
+}`,
 
-    var collapses = document.querySelectorAll('.collapse');
+		editor3: `Функція привітання(імя) {
+  Друк('Привіт, ' + імя + '!');
+}
 
-    collapses.forEach(function (collapse) {
-        collapse.addEventListener('show.bs.collapse', function () {
-            collapses.forEach(function (otherCollapse) {
-                if (otherCollapse !== collapse) {
-                    var bsCollapse = new bootstrap.Collapse(otherCollapse, { toggle: false });
-                    bsCollapse.hide();
-                }
-            });
-        });
-    });
+привітання('Ніка');`,
+
+		editor4: `Функція рахувати(лічильник) {
+  Поки (лічильник > 0) {
+    Друк('Лічильник: ' + лічильник);
+
+    лічильник--;
+  }
+}
+
+рахувати(5);`,
+
+		editor5: `Змінна назва = 'Ніка';
+
+Друк('Мене звати: ' + назва);`,
+
+		editor6: `константа рік = 2024;
+
+Друк('Цей рік: ' + рік);`,
+
+		editor7: `Для (Змінна i = 0; i < 5; i++) {
+  Друк('Крок ' + i);
+}`,
+
+		editor8: `Якщо (true та true) {
+  Друк('Обидві умови істинні');
+} Інакше якщо (false або true) {
+  Друк('Одна з умов істинна');
+} Інакше {
+  Друк('Усі умови хибні');
+}`,
+
+		editor9: `Для (Змінна i = 0; i < 5; i++) {
+  Якщо (i === 3) {
+    Зупинити;
+  }
+
+  Друк('i: ' + i);
+}`,
+
+		editor10: `Для (Змінна i = 0; i < 5; i++) {
+  Якщо (i === 2) {
+    Пропустити;
+  }
+
+  Друк('Крок: ' + i);
+}`,
+
+		editor11: `Попередження('Привіт, це повідомлення для тебе!');`,
+
+		editor12: `Змінна випадкове = ВипадковеЧисло();
+
+Друк('Випадкове число: ' + випадкове);`,
+
+		editor13: `Змінна сьогодні = Нова Дата();
+
+Друк('Сьогоднішня дата: ' + сьогодні);`,
+
+		editor14: `Друк('Час зараз: ' + Зараз());`,
+
+		editor15: `Друк('Округлити 4.6: ' + Округлити(4.6));
+
+Друк('Підлога 4.9: ' + Підлога(4.9));
+
+Друк('Стеля 4.1: ' + Стеля(4.1));`,
+
+		editor16: `Друк('Мінімум з 3 і 8: ' + Мінімум(3, 8));
+
+Друк('Максимум з 3 і 8: ' + Максимум(3, 8));`,
+		editor17: `Змінна корінь = Корінь(25);
+Друк('Корінь з 25: ' + корінь);`,
+
+		editor18: `Друк('2 в степені 3: ' + Степінь(2, 3));`,
+
+		editor19: `Змінна текст = 'Привіт';
+Друк('Довжина: ' + текст.Довжина);`,
+
+		editor20: `Змінна ім'я = 'оля';
+Друк('Великими: ' + ім'я.Великими());
+Друк('Малими: ' + ім'я.Малими());`,
+
+		editor21: `Змінна рядок1 = '42';
+Змінна рядок2 = '3.14';
+Друк('parseInt: ' + ЦілеЧисло(рядок1));
+Друк('parseFloat: ' + Число(рядок2));`,
+
+		editor22: `Змінна список = Масив;
+список.Додати('яблуко');
+список.Додати('банан');
+Друк('Масив: ' + список);
+список.ВидалитиОстанній();
+Друк('Після видалення: ' + список);`,
+
+		editor23: `Змінна учень = Об'єкт;
+учень.ім'я = 'Оля';
+учень.вік = 10;
+Друк('Ключі: ' + Ключі(учень));
+Друк('Значення: ' + Значення(учень));
+Друк('Пари: ' + Пари(учень));`,
+
+		editor24: `Змінна дані = Об'єкт;
+дані.місто = 'Київ';
+
+Якщо ('місто' ЄКлюч дані) {
+  Друк('Місто знайдено: ' + дані.місто);
+}
+
+Видалити дані.місто;
+Друк('Після видалення: ' + дані);`,
+	};
+
+	Object.keys(editorContents).forEach((id) => {
+		const editor = ace.edit(document.getElementById(id));
+		editor.setTheme("ace/theme/monokai");
+		editor.session.setMode("ace/mode/javascript");
+		editor.setValue(editorContents[id], -1);
+		editor.setOptions({
+			readOnly: true,
+			highlightActiveLine: false,
+			highlightGutterLine: false,
+		});
+		editor.renderer.$cursorLayer.element.style.display = "none";
+	});
+
+	var collapses = document.querySelectorAll(".collapse");
+
+	collapses.forEach(function (collapse) {
+		collapse.addEventListener("show.bs.collapse", function () {
+			collapses.forEach(function (otherCollapse) {
+				if (otherCollapse !== collapse) {
+					var bsCollapse = new bootstrap.Collapse(otherCollapse, {
+						toggle: false,
+					});
+					bsCollapse.hide();
+				}
+			});
+		});
+	});
+
+	// Object.keys(editorContents).forEach((id) => {
+	// 	const editor = ace.edit(document.getElementById(id));
+	// 	editor.setTheme("ace/theme/monokai");
+	// 	editor.session.setMode("ace/mode/javascript");
+	// 	editor.setValue(editorContents[id], -1);
+	// 	editor.setOptions({
+	// 		readOnly: true,
+	// 		highlightActiveLine: false,
+	// 		highlightGutterLine: false,
+	// 	});
+	// 	editor.renderer.$cursorLayer.element.style.display = "none";
+	// });
+
+	// const collapses = document.querySelectorAll(".collapse");
+	// collapses.forEach((collapse) => {
+	// 	collapse.addEventListener("show.bs.collapse", function () {
+	// 		collapses.forEach((other) => {
+	// 			if (other !== collapse) {
+	// 				const bsCollapse =
+	// 					bootstrap.Collapse.getOrCreateInstance(other);
+	// 				bsCollapse.hide();
+	// 			}
+	// 		});
+	// 	});
+	// });
 </script>
