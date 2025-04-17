@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="/" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>UA Code — Приклади коду українською мовою</title>
+		<meta itemprop="name" content="UA Code — Приклади коду українською мовою" />
+		<meta name="twitter:title" content="UA Code — Приклади коду українською мовою" />
+		<meta property="og:title" content="UA Code — Приклади коду українською мовою" />
+
+		<meta name="description" content="Дивись приклади програм на UA Code. Навчайся ефективно, вивчаючи логіку, синтаксис та структуру коду українською мовою на базі JavaScript." />
+		<meta itemprop="description" content="Дивись приклади програм на UA Code. Навчайся ефективно, вивчаючи логіку, синтаксис та структуру коду українською мовою на базі JavaScript." />
+		<meta name="twitter:description" content="Дивись приклади програм на UA Code. Навчайся ефективно, вивчаючи логіку, синтаксис та структуру коду українською мовою на базі JavaScript." />
+		<meta property="og:description" content="Дивись приклади програм на UA Code. Навчайся ефективно, вивчаючи логіку, синтаксис та структуру коду українською мовою на базі JavaScript." />
+
+		<meta itemprop="image" content="https://uacode.itkamianets.com/img/share.png" />
+		<meta name="twitter:image:src" content="https://uacode.itkamianets.com/img/share.png" />
+		<meta property="og:image" content="https://uacode.itkamianets.com/img/share.png" />
+
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container-fluid">
+				<a
+					class="navbar-brand logo-left"
+					href="/"
+					style="padding-right: 20px"
+				>
+					<img src="img/logoheader.svg" alt="" />
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/compiler">Компілятор</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/commands">Команди</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/examples">Приклади</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main class="main-content__section">
+			<div class="container example-block" style="margin-top: 80px">
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Друк"</h5>
+			<div id="editor1" style="height: 200px; width: 350px">
+				Друк('Світ');
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Якщо"</h5>
+			<div id="editor2" style="height: 200px; width: 350px">
+				якщо (true) { Друк('Це працює!'); }
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Функція"</h5>
+			<div id="editor3" style="height: 200px; width: 350px">
+				Функція привітання(imya) { Друк('Привіт, ' + imya + '!'); }
+				привітання('Ніка')
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Поки"</h5>
+			<div id="editor4" style="height: 200px; width: 350px">
+				Функція рахувати(лічильник) { поки (лічильник > 0) {
+				Друк('Лічильник: ' + лічильник); лічильник--; } } рахувати(5);
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Змінна"</h5>
+			<div id="editor5" style="height: 200px; width: 350px">
+				змінна назва = 'Ніка'; Друк('Мене звати: ' + назва);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Константа"</h5>
+			<div id="editor6" style="height: 200px; width: 350px">
+				константа рік = 2024; Друк('Цей рік: ' + рік);
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Для"</h5>
+			<div id="editor7" style="height: 200px; width: 350px">
+				для (змінна i = 0; i < 5; i++) { Друк('Крок ' + i); }
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				Логічні оператори "та", "або"
+			</h5>
+			<div id="editor8" style="height: 200px; width: 350px">
+				якщо (true та true) { Друк('Обидві умови істинні'); } інакше {
+				Друк('Одна з умов хибна'); }
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Зупинити"</h5>
+			<div id="editor9" style="height: 200px; width: 350px">
+				Для (Змінна i = 0; i < 5; i++) { Якщо (i === 3) { Зупинити; }
+				Друк('i: ' + i); }
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Пропустити"</h5>
+			<div id="editor10" style="height: 200px; width: 350px">
+				Для (Змінна i = 0; i < 5; i++) { Якщо (i === 2) { Пропустити; }
+				Друк('Крок: ' + i); }
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Попередження"</h5>
+			<div id="editor11" style="height: 200px; width: 350px">
+				Попередження('Привіт, це повідомлення для тебе!');
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"ВипадковеЧисло"
+			</h5>
+			<div id="editor12" style="height: 200px; width: 350px">
+				Змінна випадкове = ВипадковеЧисло(); Друк('Випадкове число: ' +
+				випадкове);
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Дата"</h5>
+			<div id="editor13" style="height: 200px; width: 350px">
+				Змінна сьогодні = Нова Дата(); Друк('Сьогоднішня дата: ' +
+				сьогодні);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Зараз"</h5>
+			<div id="editor14" style="height: 200px; width: 350px">
+				Друк('Час зараз: ' + Зараз());
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Округлення"</h5>
+			<div id="editor15" style="height: 200px; width: 350px">
+				Друк('Округлити 4.6: ' + Округлити(4.6)); Друк('Підлога 4.9: ' +
+				Підлога(4.9)); Друк('Стеля 4.1: ' + Стеля(4.1));
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"Мінімум / Максимум"
+			</h5>
+			<div id="editor16" style="height: 200px; width: 350px">
+				Друк('Мінімум з 3 і 8: ' + Мінімум(3, 8)); Друк('Максимум з 3 і
+				8: ' + Максимум(3, 8));
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Корінь"</h5>
+			<div id="editor17" style="height: 200px; width: 350px">
+				Змінна корінь = Корінь(25); Друк('Корінь з 25: ' + корінь);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Степінь"</h5>
+			<div id="editor18" style="height: 200px; width: 350px">
+				Друк('2 в степені 3: ' + Степінь(2, 3));
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Довжина"</h5>
+			<div id="editor19" style="height: 200px; width: 350px">
+				Змінна текст = 'Привіт'; Друк('Довжина: ' + текст.Довжина);
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"Великими / Малими"
+			</h5>
+			<div id="editor20" style="height: 200px; width: 350px">
+				Змінна імя = 'оля'; Друк('Великими: ' + імя.Великими());
+				Друк('Малими: ' + імя.Малими());
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"ЦілеЧисло / Число"
+			</h5>
+			<div id="editor21" style="height: 200px; width: 350px">
+				Змінна рядок1 = '42'; Змінна рядок2 = '3.14'; Друк('parseInt: '
+				+ ЦілеЧисло(рядок1)); Друк('parseFloat: ' + Число(рядок2));
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Масив"</h5>
+			<div id="editor22" style="height: 200px; width: 350px">
+				Змінна список = Масив; список.Додати('яблуко');
+				список.Додати('банан'); Друк('Масив: ' + список);
+				список.ВидалитиОстанній(); Друк('Після видалення: ' + список);
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 40px">
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">"Обєкт"</h5>
+			<div id="editor23" style="height: 200px; width: 350px">
+				Змінна учень = Обєкт; учень.імя = 'Оля'; учень.вік = 10;
+				Друк('Ключі: ' + Ключі(учень)); Друк('Значення: ' +
+				Значення(учень)); Друк('Пари: ' + Пари(учень));
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h5 style="color: aliceblue; text-align: center">
+				"ЄКлюч / Видалити"
+			</h5>
+			<div id="editor24" style="height: 200px; width: 350px">
+				Змінна дані = Обєкт; дані.місто = 'Київ'; Якщо ('місто' ЄКлюч
+				дані) { Друк('Місто знайдено: ' + дані.місто); } Видалити
+				дані.місто; Друк('Після видалення: ' + дані);
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="jupiter planet"></div>
+
+<script>
+	const editorContents = {
+		editor1: `Друк('Світ');`,
+
+		editor2: `Якщо (true) {
+  Друк('Це працює!');
+}`,
+
+		editor3: `Функція привітання(імя) {
+  Друк('Привіт, ' + імя + '!');
+}
+
+привітання('Ніка');`,
+
+		editor4: `Функція рахувати(лічильник) {
+  Поки (лічильник > 0) {
+    Друк('Лічильник: ' + лічильник);
+
+    лічильник--;
+  }
+}
+
+рахувати(5);`,
+
+		editor5: `Змінна назва = 'Ніка';
+
+Друк('Мене звати: ' + назва);`,
+
+		editor6: `константа рік = 2024;
+
+Друк('Цей рік: ' + рік);`,
+
+		editor7: `Для (Змінна i = 0; i < 5; i++) {
+  Друк('Крок ' + i);
+}`,
+
+		editor8: `Якщо (true та true) {
+  Друк('Обидві умови істинні');
+} Інакше якщо (false або true) {
+  Друк('Одна з умов істинна');
+} Інакше {
+  Друк('Усі умови хибні');
+}`,
+
+		editor9: `Для (Змінна i = 0; i < 5; i++) {
+  Якщо (i === 3) {
+    Зупинити;
+  }
+
+  Друк('i: ' + i);
+}`,
+
+		editor10: `Для (Змінна i = 0; i < 5; i++) {
+  Якщо (i === 2) {
+    Пропустити;
+  }
+
+  Друк('Крок: ' + i);
+}`,
+
+		editor11: `Попередження('Привіт, це повідомлення для тебе!');`,
+
+		editor12: `Змінна випадкове = ВипадковеЧисло();
+
+Друк('Випадкове число: ' + випадкове);`,
+
+		editor13: `Змінна сьогодні = Нова Дата();
+
+Друк('Сьогоднішня дата: ' + сьогодні);`,
+
+		editor14: `Друк('Час зараз: ' + Зараз());`,
+
+		editor15: `Друк('Округлити 4.6: ' + Округлити(4.6));
+
+Друк('Підлога 4.9: ' + Підлога(4.9));
+
+Друк('Стеля 4.1: ' + Стеля(4.1));`,
+
+		editor16: `Друк('Мінімум з 3 і 8: ' + Мінімум(3, 8));
+
+Друк('Максимум з 3 і 8: ' + Максимум(3, 8));`,
+		editor17: `Змінна корінь = Корінь(25);
+
+Друк('Корінь з 25: ' + корінь);`,
+
+		editor18: `Друк('2 в степені 3: ' + Степінь(2, 3));`,
+
+		editor19: `Змінна текст = 'Привіт';
+
+Друк('Довжина: ' + текст.Довжина);`,
+
+		editor20: `Змінна імя = 'оля';
+
+Друк('Великими: ' + імя.Великими());
+
+Друк('Малими: ' + імя.Малими());`,
+
+		editor21: `Змінна рядок1 = '42';
+
+Змінна рядок2 = '3.14';
+
+Друк('parseInt: ' + ЦілеЧисло(рядок1));
+
+Друк('parseFloat: ' + Число(рядок2));`,
+
+		editor22: `Змінна список = Масив;
+
+список.Додати('яблуко');
+
+список.Додати('банан');
+
+Друк('Масив: ' + список);
+
+список.ВидалитиОстанній();
+
+Друк('Після видалення: ' + список);`,
+
+		editor23: `Змінна учень = Обєкт;
+
+учень.імя = 'Оля';
+
+учень.вік = 10;
+
+Друк('Ключі: ' + Ключі(учень));
+
+Друк('Значення: ' + Значення(учень));
+
+Друк('Пари: ' + Пари(учень));`,
+
+		editor24: `Змінна дані = Обєкт;
+
+дані.місто = 'Київ';
+
+Якщо ('місто' ЄКлюч дані) {
+  Друк('Місто знайдено: ' + дані.місто);
+}
+
+Видалити дані.місто;
+
+Друк('Після видалення: ' + дані);`,
+	};
+
+	Object.keys(editorContents).forEach((id) => {
+		const editor = ace.edit(document.getElementById(id));
+		editor.setTheme("ace/theme/monokai");
+		editor.session.setMode("ace/mode/javascript");
+		editor.setValue(editorContents[id], -1); // -1 moves cursor to top
+		editor.setOptions({
+			readOnly: true,
+			highlightActiveLine: false,
+			highlightGutterLine: false,
+		});
+		editor.renderer.$cursorLayer.element.style.display = "none"; // hide cursor
+	});
+</script>
+
+		</main>
+
+		<footer id="footer">
+			<div class="row">
+				<div class="col">
+					<a href="/">
+						<img src="img/logoheader.svg" alt="" />
+					</a>
+					<div class="social">
+						<a
+							href="https://github.com/IT-Kamianets/codeua"
+							target="_blank"
+							class="link"
+							><img src="/codeua/img/github.svg" alt=""
+						/></a>
+						<a
+							href="https://webart.work/"
+							target="_blank"
+							class="link"
+							><img src="/codeua/img/logo2.jpg" alt=""
+						/></a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 text-color">
+					<p><b>Сторінки:</b></p>
+					<p><a href="/compiler">Компілятор</a></p>
+					<p><a href="/commands">Команди</a></p>
+					<p><a href="/examples">Приклади</a></p>
+				</div>
+				<div class="col-6 text-color">
+					<p><b>Автори:</b></p>
+					<p><a href="https://github.com/nikiquickie">NR </a></p>
+					<p>
+						<a href="https://github.com/CrackerakiUA"
+							>Honchar Denys
+						</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/index.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	</body>
+</html>
